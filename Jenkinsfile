@@ -100,8 +100,8 @@ pipeline {
                         GIT_BRANCH=${branchName} \
                         AUTH_HOST=\$AUTH_HOST \
                         AUTH_PORT=\$AUTH_PORT \
-                        NOTES_HOST=\$NOTES_HOST \
-                        NOTES_PORT=\$NOTES_PORT \
+                        NOTES_HOST=\$NOTE_HOST \
+                        NOTES_PORT=\$NOTE_PORT \
                         ./deploy.sh
                         """
                     }
