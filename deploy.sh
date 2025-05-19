@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [[ -z "$SSH_KEY" || -z "$EC2_USER" || -z "$EC2_IP" || -z "$REMOTE_PATH" || -z "$REPO_URL" || -z "$APP_NAME" || -z "$NODE_ENV" || -z "$GIT_BRANCH" || -z "$AUTH_HOST" || -z "$AUTH_PORT" || -z "$NOTES_HOST" || "$NOTES_PORT"]]; then
+if [[ -z "$SSH_KEY" || -z "$EC2_USER" || -z "$EC2_IP" || -z "$REMOTE_PATH" || -z "$REPO_URL" || -z "$APP_NAME" || -z "$NODE_ENV" || -z "$GIT_BRANCH" || -z "$AUTH_HOST" || -z "$AUTH_PORT" || -z "$NOTES_HOST" || -z "$NOTES_PORT"]]; then
   echo "Faltan variables de entorno necesarias."
   exit 1
 fi
