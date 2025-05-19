@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { envsValues } from './common/config/get-envs-values';
 import { SwaggerModule } from '@nestjs/swagger';
+import { RpcCustomException } from './common/exceptions/rpc-custom.exception';
 
 async function bootstrap() {
   const logger = new Logger('ApiGateway');
@@ -14,6 +15,8 @@ async function bootstrap() {
       transform: true,
     }),
   );
+  app.useGlobalFilters(new RpcCustomException());
+  app.enableCors();
   SwaggerModule.setup(
     'api-docs',
     app,
