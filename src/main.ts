@@ -27,11 +27,6 @@ async function bootstrap() {
         description: 'API Gateway for the application',
         version: '1.0',
       },
-      servers: [
-        {
-          url: `http://localhost:${envsValues.PORT}`,
-        },
-      ],
     }),
   );
   await app.listen(envsValues.PORT);

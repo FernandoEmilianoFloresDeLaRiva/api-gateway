@@ -12,7 +12,9 @@ import { catchError } from 'rxjs';
 import { TRANSPORT_CONSTANTS } from 'src/common/constants/transports.constant';
 import { RegisterDTO } from './dtos/register.dto';
 import { LoginDTO } from './dtos/login.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(
