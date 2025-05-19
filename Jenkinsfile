@@ -58,26 +58,25 @@ pipeline {
             }
         }
 
-        stage('Checkout') {
-            when {
-                expression { env.DEPLOY_ENV != 'none' }
-            }
-            steps {
-                git branch: env.GIT_BRANCH.replaceAll('origin/', ''), url: "${REPO_URL}"
-            }
-        }
+        // stage('Checkout') {
+        //     when {
+        //         expression { env.DEPLOY_ENV != 'none' }
+        //     }
+        //     steps {
+        //         git branch: env.GIT_BRANCH.replaceAll('origin/', ''), url: "${REPO_URL}"
+        //     }
+        // }
 
-        stage('Build') {
-            when {
-                expression { env.DEPLOY_ENV != 'none' }
-            }
-            steps {
-                sh 'rm -rf node_modules'
-                sh 'npm i'
-                sh 'npm i --save-dev @types/node'
-                sh 'npm run build'
-            }
-        }
+        // stage('Build') {
+        //     when {
+        //         expression { env.DEPLOY_ENV != 'none' }
+        //     }
+        //     steps {
+        //         sh 'rm -rf node_modules'
+        //         sh 'npm ci'
+        //         sh 'npm run build'
+        //     }
+        // }
 
         stage('Deploy') {
             when {
