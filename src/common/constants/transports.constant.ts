@@ -1,0 +1,4 @@
+export const TRANSPORT_CONSTANTS = {
+  AUTH: 'AUTH_SERVICE',
+  NOTES: 'NOTES_SERVICE',
+};
