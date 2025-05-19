@@ -7,6 +7,6 @@ export class HealthController {
   @Get()
   @HttpCode(HttpStatus.OK)
   healthCheck() {
-    return { status: 'ok' };
+    return { status: 'ok', enviroment : 'qa' };
   }
 }
