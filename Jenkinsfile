@@ -34,21 +34,21 @@ pipeline {
                             break
                         case 'dev':
                             env.DEPLOY_ENV = 'development'
-                            env.EC2_IP = ''
+                            env.EC2_IP = '3.222.136.111'
                             env.NODE_ENV = 'development'
-                            env.AUTH_HOST = ''
-                            env.AUTH_PORT = ''
-                            env.NOTE_HOST = ''
-                            env.NOTE_PORT = ''
+                            env.AUTH_HOST = '44.205.201.108'
+                            env.AUTH_PORT = '3000'
+                            env.NOTE_HOST = '44.210.28.87'
+                            env.NOTE_PORT = '3000'
                             break
                         case 'qa':
                             env.DEPLOY_ENV = 'qa'
-                            env.EC2_IP = ''
+                            env.EC2_IP = '34.194.76.73'
                             env.NODE_ENV = 'qa'
-                            env.AUTH_HOST = ''
-                            env.AUTH_PORT = ''
-                            env.NOTE_HOST = ''
-                            env.NOTE_PORT = ''
+                            env.AUTH_HOST = '3.227.65.63'
+                            env.AUTH_PORT = '3000'
+                            env.NOTE_HOST = '52.45.170.88'
+                            env.NOTE_PORT = '3000'
                             break
                         default:
                             env.DEPLOY_ENV = 'none'
