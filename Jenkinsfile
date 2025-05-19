@@ -74,6 +74,7 @@ pipeline {
             steps {
                 sh 'rm -rf node_modules'
                 sh 'npm i'
+                sh 'npm i --save-dev @types/node'
                 sh 'npm run build'
             }
         }
