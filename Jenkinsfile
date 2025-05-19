@@ -29,8 +29,8 @@ pipeline {
                             env.NODE_ENV = 'production'
                             env.AUTH_HOST = '3.230.217.180'
                             env.AUTH_PORT = '3000'
-                            env.NOTE_HOST = 'dummy-host'
-                            env.NOTE_PORT = '0000'
+                            env.NOTE_HOST = '107.22.77.233'
+                            env.NOTE_PORT = '3000'
                             break
                         case 'dev':
                             env.DEPLOY_ENV = 'development'
