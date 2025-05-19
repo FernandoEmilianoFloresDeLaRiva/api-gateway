@@ -73,7 +73,7 @@ pipeline {
             }
             steps {
                 sh 'rm -rf node_modules'
-                sh 'npm ci'
+                sh 'npm i'
                 sh 'npm run build'
             }
         }
